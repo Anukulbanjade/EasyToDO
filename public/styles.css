@@ -1,0 +1,257 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #282c34; /* Dark background */
+  color: #ffffff; /* Light text */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #3a3f47; /* Slightly lighter background */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header Styles */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  color: #61dafb; /* React blue */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 i {
+  margin-right: 10px;
+}
+
+.header h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Success Message Styles */
+.success-message {
+  color: #21c35e; /* Bright green */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  padding: 10px;
+  border-radius: 4px;
+  animation: fadeOut 1s ease-in-out 2s forwards; /* Fades out after 2s */
+}
+
+.success-message.edit {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  animation: fadeOut 1s ease-in-out 2s forwards; /* Fades out after 2s */
+}
+
+.success-message.delete {
+  color: #d00e21;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  animation: fadeOut 1s ease-in-out 1s forwards; /* Fades out after 2s */
+}
+
+/* Fade out animation */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Form Styles */
+form.add-todo-form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #444b52; /* Darker form background */
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  background-color: #565e68; /* Input background */
+  border-radius: 4px;
+  padding: 16px;
+  flex-grow: 4;
+}
+
+input[type="text"] {
+  flex-grow: 4;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #565e68; /* Input background */
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"] {
+  background-color: #61dafb;
+  color: #282c34;
+}
+
+button[type="submit"]:hover {
+  background-color: #21a1f1;
+}
+
+button.delete-btn {
+  background-color: #f44336;
+  color: #ffffff;
+}
+
+button.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+button.edit-btn {
+  background-color: #8bc34a; /* Light green */
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+button.edit-btn:hover {
+  background-color: #689f38; /* Darker green */
+}
+
+/* Todo Grid Styles */
+.todo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.todo-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #565e68;
+  background-color: #3a3f47;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.todo-text {
+  flex-grow: 1;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Add some space between buttons */
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.prev-link,
+.next-link,
+.home-link {
+  padding: 10px;
+  margin: 0 5px;
+  background-color: #61dafb;
+  color: #282c34;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.prev-link:hover,
+.next-link:hover,
+.home-link:hover {
+  background-color: #21a1f1;
+}
+
+/* No Todos Message Styles */
+.no-todos {
+  text-align: center;
+  font-style: italic;
+  color: #999;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #3a3f47;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+
+.close-button {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.edit-todo-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #565e68;
+  color: #ffffff;
+}

@@ -1,0 +1,52 @@
+doctype html
+html
+  head
+    title EasyToDo
+    link(rel='stylesheet', href='/styles.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css')
+    script(src='/script.js')
+  body
+    .container
+      .header
+        h1
+          a(href="/") 
+            i.fas.fa-tasks
+            |  EasyToDo
+      form(action="/api/todos" method="POST" class="add-todo-form")
+        .input-container
+          input(type="text" name="text" placeholder="TO DO")
+          button(type="submit")
+            i.fas.fa-plus
+            |  Add
+      if successMessage
+        p.success-message= successMessage
+      if todos.length
+        .todo-grid
+          each todo in todos
+            .todo-item
+              span.todo-text= todo.text
+              .button-group
+                form(action=`/todos/${todo._id}?_method=DELETE` method="POST")
+                  button.delete-btn(data-id=todo._id)
+                    i.fas.fa-trash-alt
+                button.edit-btn(data-id=todo._id)
+                  i.fas.fa-edit
+      else
+        p.no-todos No todos found.
+      .pagination
+        if currentPage > 1
+          a.prev-link(href=`/?page=${currentPage - 1}`) Previous
+        if hasNextPage
+          a.next-link(href=`/?page=${currentPage + 1}`) Next
+          a.home-link(href="/")
+            i.fas.fa-home
+
+    // Modal for editing todos
+    .modal#editModal
+      .modal-content
+        span.close-button &times;
+        form.edit-todo-form
+          input(type="hidden" id="editTodoId")
+          label(for="editTodoText") Edit Todo
+          input(type="text" id="editTodoText" name="text")
+          button(type="submit") Save
