@@ -24,7 +24,7 @@ Follow these simple steps to get EasyToDo up and running on your local machine:
 1. **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/anukulbanjade/EasyToDo.git
+    git clone https://github.com/Anukulbanjade/EasyToDO.git
     cd EasyToDo
     ```
 
