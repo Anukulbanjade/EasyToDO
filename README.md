@@ -1,8 +1,8 @@
-# EasyToDo
+# EasyToDo 📝
 
 EasyToDo is a simple and elegant to-do list application built with Node.js, Express, MongoDB, and Mongoose. It allows users to add, edit, and delete to-do items with ease. The application uses Pug for templating and includes a clean, responsive design.
 
-## Features
+## Features ✨
 
 - **Add New To-Do Items:** Quickly add new tasks to your list.
 - **Edit Existing To-Do Items:** Modify tasks as needed.
@@ -10,16 +10,16 @@ EasyToDo is a simple and elegant to-do list application built with Node.js, Expr
 - **Pagination:** Navigate through your tasks easily with pagination.
 - **Responsive Design:** Enjoy a seamless experience on any device.
 
-## Installation
+## Installation 🛠️
 
 Follow these simple steps to get EasyToDo up and running on your local machine:
 
-### Prerequisites
+### Prerequisites 📋
 
 - **Node.js**: Ensure you have Node.js installed. You can download it from [nodejs.org](https://nodejs.org/).
 - **MongoDB**: Make sure you have MongoDB installed and running. You can use a local MongoDB instance or a MongoDB Atlas cluster.
 
-### Steps
+### Steps 🚀
 
 1. **Clone the Repository:**
 
@@ -46,7 +46,7 @@ Follow these simple steps to get EasyToDo up and running on your local machine:
 
     The application will start on `http://localhost:3000`.
 
-## Usage
+## Usage 📖
 
 1. **Home Page:**
 
@@ -54,35 +54,27 @@ Follow these simple steps to get EasyToDo up and running on your local machine:
 
 2. **Edit To-Do:**
 
-    Click the edit button (pencil icon) next to a to-do item to edit its text. A modal will appear where you can update the text and save the changes.
+    Click the edit button (✏️) next to a to-do item to edit its text. A modal will appear where you can update the text and save the changes.
 
 3. **Delete To-Do:**
 
-    Click the delete button (trash icon) next to a to-do item to delete it.
+    Click the delete button (🗑️) next to a to-do item to delete it.
 
 4. **Pagination:**
 
     If there are more than 10 to-do items, pagination controls will appear at the bottom of the list to navigate through the pages.
 
-## Project Structure
-
-/EasyToDo
-├── app.js
-├── views
-│   └── index.pug
-├── public
-│   ├── styles.css
-│   └── script.js
-└── package.json
+## Project Structure 📂
+![image](https://github.com/Anukulbanjade/EasyToDO/assets/91711407/cdeded88-2750-4467-8916-f2b0b54876a3)
 
 
-- **app.js:** Main server file.
-- **views/index.pug:** Pug template for the home page.
-- **public/styles.css:** CSS file for styling.
-- **public/script.js:** JavaScript file for client-side functionality.
-- **package.json:** Project metadata and dependencies.
+- **📄 app.js:** Main server file.
+- **📁 views/index.pug:** Pug template for the home page.
+- **📁 public/styles.css:** CSS file for styling.
+- **📁 public/script.js:** JavaScript file for client-side functionality.
+- **📄 package.json:** Project metadata and dependencies.
 
-## Dependencies
+## Dependencies 📦
 
 - **express:** Fast, unopinionated, minimalist web framework for Node.js.
 - **mongoose:** Elegant MongoDB object modeling for Node.js.
@@ -91,11 +83,15 @@ Follow these simple steps to get EasyToDo up and running on your local machine:
 - **method-override:** Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn't support it.
 - **pug:** Robust, elegant, feature-rich template engine for Node.js.
 
-## Contributing
+## Contributing 🤝
 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
-## Acknowledgements
+## License 📜
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements 🙏
 
 - [Express](https://expressjs.com/)
 - [MongoDB](https://www.mongodb.com/)
@@ -104,4 +100,4 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 ---
 
-Feel free to customize this README file as needed for your project. Happy coding!
+Feel free to customize this README file as needed for your project. Happy coding! 🎉
